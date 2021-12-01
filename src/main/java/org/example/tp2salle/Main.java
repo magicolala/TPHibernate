@@ -7,7 +7,6 @@ import org.example.tp2salle.dao.SpecialiteDao;
 import org.example.tp2salle.entity.Etudiant;
 import org.example.tp2salle.entity.Specialite;
 
-import java.io.IOException;
 import java.util.List;
 
 public class Main {
@@ -15,7 +14,7 @@ public class Main {
     static EtudiantDao   etudiantDao;
     static SpecialiteDao specialiteDao;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         DaoFactory daoFactory = new DaoFactory();
         etudiantDao = daoFactory.getEtudiantDao();
         specialiteDao = daoFactory.getSpecialiteDao();
@@ -32,7 +31,7 @@ public class Main {
         specialiteDao.ajouter(sp1);
         specialiteDao.ajouter(sp2);
 
-        etudiantDao.affecterSpecialiteAEtudiant(1L,10L);
+        etudiantDao.affecterSpecialiteAEtudiant(1L, 10L);
         lister();
     }
 
